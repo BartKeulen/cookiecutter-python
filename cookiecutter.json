@@ -1,0 +1,14 @@
+{
+    "project_name": "My Python Project",
+    "package_name": "{{ cookiecutter.project_name | lower() | replace(' ', '_') }}",
+    "description": "Description for {{ cookiecutter.project_name }}",
+    "version": "0.1.0",
+    "python_version": "3.10",
+    "author": "John Doe",
+    "email": "john.doe@example.com",
+    "repo_name": "{{ cookiecutter.author | lower() | replace(' ', '') }}/{{ cookiecutter.package_name }}",
+    "repo_url": "https://github.com/{{ cookiecutter.repo_name }}",
+    "repo_url_ssh": "git@github.com:{{ cookiecutter.repo_name }}.git",
+    "site_url": "",
+    "docs_url": ""
+}

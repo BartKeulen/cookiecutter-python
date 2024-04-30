@@ -1,0 +1,46 @@
+# Site
+site_name: {{ cookiecutter.project_name }}
+site_author: {{ cookiecutter.author }}
+{%- if cookiecutter.docs_url -%}
+site_url: {{ cookiecutter.docs_url }}
+{% endif %}
+
+# Repository
+repo_name: {{ cookiecutter.repo_name }}
+repo_url: {{ cookiecutter.repo_url }}
+edit_uri: blob/main/docs/
+
+# Theme
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.footer
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - toc.integrate
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
+  - macros
+
+# Navigation
+nav:
+  - Home: "index.md"
